@@ -1,10 +1,14 @@
 module.exports = {
-  title: "Flexcards",
+  title: "CS638",
   themeConfig: {
     nav: [
       {
         text: "GitHub",
-        link: "https://github.com/flex-card-app/"
+        link: "https://github.com/madison-housing-cs638"
+      },
+      {
+        text: "Class Website",
+        link: "https://wisc-ds-projects.github.io/f20/"
       },
     ],
     sidebar: [
@@ -15,18 +19,18 @@ module.exports = {
         children: [ ]
       },
       {
-        title: "About Flexcards", 
-        path: "/about/",
+        title: "Data Sources", 
+        path: "/data/",
         collapsable: true,
         children: [ ]
       },
       {
-        title: "Setup",
-        path: "/setup/",
+        title: "Weekly Updates",
+        path: "/updates/",
         collapsable: true,
         children: [
-          ["/setup/Win 10 Dev Setup", "Windows 10 Setup"],
-          ["/setup/Amplify Setup", "Amplify Setup"]
+          ["/updates/Week5", "Week 5: Sep 28"],
+          ["/updates/Week6", "Week 6: Oct 5"],
         ]
       },
       {
@@ -34,41 +38,7 @@ module.exports = {
         path: "/process/",
         collapsable: true,
         children: [ ]
-      },
-      {
-        title: "Projects",
-        path: "/projects/",
-        collapsable: true,
-        children: [
-          ["/projects/flex-card", "Flex-Card"],
-          ["/projects/flex-card-components", "Flex-Card-Components"],
-          ["/projects/dev-wiki", "Dev-Wiki"]
-        ]
-      },
-      {
-        title: "Standards",
-        path: "/standards/",
-        collapsable: true,
-        children: [
-          {
-            title: "Front End",
-            path: "/standards/front-end/",
-            collapsable: true,
-            children: [
-              ["/standards/front-end/shared components", "Shared Components"],
-              ["/standards/front-end/vuex", "Vuex / Datastore"]
-            ]
-          },
-          {
-            title: "Back End",
-            path: "/standards/back-end/",
-            collapsable: true,
-            children: [ 
-              ["/standards/back-end/database", "Database"],
-            ]
-          },
-        ]
-      }  
+      }, 
     ],
     base: "/dev-wiki/"
   },

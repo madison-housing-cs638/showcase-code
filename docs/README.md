@@ -1,5 +1,18 @@
-<img src="./media/Logo.png" alt="image-20200524142738004" style="zoom:40%;" /> 
+<img src="https://hr.madison.k12.wi.us/files/hr/uploads/madison-wisconsin-fvwd.jpg" alt="image-20200524142738004" style="zoom:80%;" /> 
 
-# Flex Cards Development Wiki
+# CS638: Data Science in Madison: Property Values in Madison
 
-Here, you will find information & resoruces on the development of flexcards. This is very much meant to be a living document, so if feel free to add to the wiki as much as possible. You can learn how [here](projects/dev-wiki.md).
+### Aarushi Gupta, Ben Kizaric Desmond Fung 
+
+For this project, we will look to examine trends in property values (speciffically Tax Assessed & past home sale prices) here in Madison.
+
+As of now, we have a couple of primary things we want to investigate:
+
+## Racialized names and Property Values 
+See initial pitch [here](./media/Home_Assessment_Pitch.pdf)
+
+## Proximity to public goods
+We want to investigate the relationship between home values and some public goods, such as:
+* Bike Paths
+* Libraries & Schools
+* Parks and Water
