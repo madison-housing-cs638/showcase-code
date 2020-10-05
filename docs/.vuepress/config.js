@@ -25,12 +25,13 @@ module.exports = {
         children: [ ]
       },
       {
-        title: "Weekly Updates",
+        title: "Visualizations",
         path: "/updates/",
         collapsable: true,
         children: [
-          ["/updates/Week5", "Week 5: Sep 28"],
-          ["/updates/Week6", "Week 6: Oct 5"],
+          ["/updates/Exploration", "Data Exploration"],
+          ["/updates/Race", "Race"],
+          ["/updates/Other", "Other Factors"],
         ]
       },
       {
