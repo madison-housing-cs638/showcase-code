@@ -11,6 +11,7 @@ The bar plot compares Adjusted Sale Price in thousand between racialized and non
 
 Unlike what we have seen last week, having a racialized name in fact has a slight disadvantage than sellers who have a racialized name. (racialized mean $295200 vs. not racialized mean $282457). Even though it is not that big of a gap, around 4.4% more, it is still important to observe and recognize such a pattern exists between the two groups.
 
+**END**
 
 ## Average Tax-Assessed values for homes with racialized and non-racialized names.
 ### Desmond Fung, 10/12
