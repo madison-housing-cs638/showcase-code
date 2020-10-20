@@ -2,6 +2,7 @@
 
 ## Average Inflation-Adjusted values for homes with racialized and non-racialized names in Madison.
 <img src="./media/Racialized_Names_Sales.png" alt="image-20200524142738004" style="zoom:100%;" />
+
 Unlike the last plot where we look at the impact of racialized black name on Tax Assessment value in Madison. This week we want to investigate whether sellers having a racialized black name has an impact on Adjusted Sale Price for single-family home in Madison.
 
 We explored 46498 addresses in Madison and filtered out all the sellers' names that contained any of the 80 racialized black names. Afterward, we split them into two groups, group that contains racialized name and group that doesn't contain racialized names.
