@@ -2,9 +2,17 @@
 
 ## Distribution of Single Family sales prices over time.
 ### Ben Kizaric 10/19
-<img src="./media/Home_Prices.gif" alt="image-20200524142738004" style="zoom:80%;" />
+![Home Prices Video](./media/Home_Prices.mp4)
+![Home Prices Inflated Video](./media/Home_Prices_Inflated.mp4)
 
-<img src="./media/Inflated_Home_Prices.gif" alt="ope" style="zoom:80%;" />
+As a pre-cursor to using sales prices in further analyses, we needed to examine how the sales prices of single family homes in Madison have changed over time, so we can adjust for inflation, and how the market value of homes has changed over time.
+
+So, we construct two animations showing how the distribution of sales prices has changed over time. Each frame of the animation shows the distribution of sales prices in a 3 year span, to reduce the noise of small year-to-year variations in sales prices. 
+
+The first animation does not adjust for inflation, and a very significant increase in raw sales prices can be observed from 1975 to 2020, with only two periods of decreased raw sales prices seen. One in the early-mid 1980s, and one in the aftermath of the 2008 financial crisis. The second animation *does* adjust for inflation, yet there is still growth in sales prices from 1975-2020, indicating that homes have become more expensive, even when considering that the value of the US dollar has dropped since 1975. The two periods of decreased sales prices are the same as in the previous graph.
+
+An interesting trend in both of the animations is that from 1975-2000, the median sales price was roughly equal to the mode sales price, but from 2000-2020, the median sales price is usually a few thousand dollars ahead of the mode. 
+
 
 ## Distribution of Single Family Tax-Assessed Home Values
 ### Desmond Fung, 9/28
