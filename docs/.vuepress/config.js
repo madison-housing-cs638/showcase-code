@@ -42,6 +42,7 @@ module.exports = {
           ["/updates/Exploration", "Data Exploration"],
           ["/updates/Race", "Race"],
           ["/updates/Other", "Other Factors"],
+          ["/updates/AssessmentQuality", "Area Evaluation"]
         ]
       },
       {

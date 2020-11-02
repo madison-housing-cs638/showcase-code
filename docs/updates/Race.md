@@ -1,6 +1,9 @@
 
 
 # Race
+## Race Composition of Assessment Areas, and Home Values
+<img src="./media/Single_Family_Race_Value.png" alt="image-20200524142738004" style="zoom:100%;" />
+
 
 ## Average Inflation-Adjusted values for homes with racialized and non-racialized names in Madison.
 ### Desmond Fung, 10/19

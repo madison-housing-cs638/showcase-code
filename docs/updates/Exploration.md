@@ -1,5 +1,9 @@
 # General Exploration
 
+## Map of Recorded Single Family Parcels
+### Aarushi Gupta, 11/2
+<img src="./media/Single_Family_Points.png" alt="image-20200524142738004" style="zoom:80%;" />
+
 ## Distribution of Single Family sales prices over time.
 ### Ben Kizaric 10/19
 ![Home Prices Video](./media/Home_Prices.mp4)
