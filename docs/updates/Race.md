@@ -1,6 +1,12 @@
+
+
 # Race
 
 ## Average Inflation-Adjusted values for homes with racialized and non-racialized names in Madison.
+### Desmond Fung, 10/19
+
+--
+
 <img src="./media/Racialized_Names_Sales.png" alt="image-20200524142738004" style="zoom:100%;" />
 
 Unlike the last plot where we look at the impact of racialized black name on Tax Assessment value in Madison. This week we want to investigate whether sellers having a racialized black name has an impact on Adjusted Sale Price for single-family home in Madison.
@@ -15,6 +21,9 @@ Unlike what we have seen last week, having a racialized name in fact has a sligh
 
 ## Average Tax-Assessed values for homes with racialized and non-racialized names.
 ### Desmond Fung, 10/12
+
+--
+
 <img src="./media/racialized_name_initial.svg" alt="image-20200524142738004" style="zoom:100%;" />
 
 This week we want to investigate whether having a racialized black name has an impact on Tax Assessment Value in Madison.
