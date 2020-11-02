@@ -1,7 +1,21 @@
 
 
-# Race
+# Percentage of multiple races' residents in Madison Assessment Areas
+
+<img src="./media/percentage of resident.gif" alt="image-20200524142738004" style="zoom:100%;" />
+
+Using what ben has as a base, we also constructed percentage of other races' residents in Madison Assessment Areas. We can see that Madison is mainly compose of white population. Only a handful of the area has less than 50% white percentage. On the other hand, Asian and Hispanic share the same scale (0 to 25) in contrast to (0 to 90) what we have seen earlier. When we take a closer look at the Asian population, we can observe they center around the Hilldale shopping center area, which is interestingly where I currently live. The Hispanic population is also fairly spread out in Madison. We can see a significantly higher than average percentage to the south of Lake Wingra.
+
+
+
+
+
+
+
+
+
 ## Race Composition of Assessment Areas, and Home Values
+
 <img src="./media/Single_Family_Race_Value.png" alt="image-20200524142738004" style="zoom:100%;" />
 
 
