@@ -14,7 +14,6 @@ To ensure, "normal" looking assessment areas, I imposed a few extra criteria on 
 The second plot shows the distribution of standard deviations of sales price growth rates in both the new and the old assessment areas.
 Even though the new assessment areas were optimized to have near-equal standard deviations of sales prices, the new assessments actually performed worse than the old ones. This might be because they only have straight, right-angle boundaries. It could also be that most of the variation of sales price growth is very localized, and sufficiently large assessment areas will have a hard time separating out the localized variation.
 
-
 ## Average Sales Price.
 ### Ben Kizaric 10/26
 <img src="./media/price_avg_assmt.svg" alt="image-20200524142738004" style="zoom:150%;" />
@@ -24,8 +23,15 @@ The small assessment areas bordering the two lakes are the most-expensive areas 
 ## Normaized Deviation of Sales Price.
 ### Ben Kizaric 11/02
 <img src="./media/price_dev_assmt.svg" alt="image-20200524142738004" style="zoom:150%;" />
-This heatmap shows how much the (Time-Adjusted) sales prices vary within each single family tax assessment area in Madison. Unlike the version shown in our presentation from 10/26, this version normalizes the standard deviation to account for the fact that assessment areas with generally higher sales prices will also have higher standard deviations of those sales prices.
+This heatmap shows how much the (Time-Adjusted) sales prices vary within each single family tax assessment area in Madison. The standard deviation is also normalized to account for the fact that assessment areas with generally higher sales prices will also have higher standard deviations of those sales prices.
+The time adjustment for sales prices is as follows:
 The map shows how most assessment areas have relatively small standard deviations, with the exception of the downtown assessment area downtown, south of the capital. This area will be the topic of further investigation.  
+
+**Time Adjustment Explanation**
+<img src="./media/time_adjustment.png" alt="image-20200524142738004" style="zoom:60%;" />
+
+**Standard Deviation Normalization**
+<img src="./media/price_std_dev_normalized.png" alt="image-20200524142738004" style="zoom:60%;" />
 
 ## Average Sales Price Growth Rate.
 ### Ben Kizaric 10/26

@@ -1,5 +1,16 @@
 module.exports = {
   title: "CS638",
+  plugins: [
+    [
+      'vuepress-plugin-mathjax',
+      {
+        target: 'svg',
+        macros: {
+          '*': '\\times',
+        },
+      },
+    ],
+  ],
   markdown: {
     extendMarkdown: md => {
       md.use(require('markdown-it-html5-embed'), {
