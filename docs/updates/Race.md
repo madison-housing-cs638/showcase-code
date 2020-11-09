@@ -1,11 +1,36 @@
 
+## Race
 
-# Percentage of multiple races' residents in Madison Assessment Areas
+## Race and Accuracy of Tax-Assesed Value
+### Desmond Fung, 11/09
+<img src="./media/race_accuracy_ratio.png" alt="image-20200524142738004" style="zoom:100%;" />
+<img src="./media/race_accuracy_log.png" alt="image-20200524142738004" style="zoom:100%;" />
+We decided to filter all the Assessment Value that is less than $40000 because some assessment value are extremely small and therefore we are getting some extreme accuracy score.
 
+Accuracy can be measured as $$\frac{AssessmentValue - SalesPrice}{AssessmentValue}$$
+-  Positive → Assessments are over-valuing homes (Bad for people)
+-  Negative → Assessments are under-valuing homes (Good for people)
+
+The mean assessment accuracy is -0.16, so assessments are on average under-valuing home. No obvious trend was observed in the scatterplot. As the number of percentage of black resident increase in the area, the accuracy still remain the same where it goes from -1 to 1.
+
+We tried approaching this question with a different equation. $$log\frac{SalesPrice}{AssessmentValue}$$
+- 0 → Equal
+- Positive → sales > assessment (Good)
+- Negative → sales < assessment (Bad)
+
+This model is a lot more evenly spread out than the last model. Mean assessment accuracy is 0.16, the exact opposite of last time. However, it still lead to the same conclusion that the number of percentage of black resident in the area has no effect on assessment accuracy.
+
+## Race and Standard Deviation of Tax-Assesed Value
+### Aarushi Gupta, 11/09
+<img src="./media/race_stddev_assmt.png" alt="image-20200524142738004" style="zoom:100%;" />
+
+
+
+## Percentage of multiple races' residents in Madison Assessment Areas
+### Desmond Fung, 11/02
 <img src="./media/Multi_Race_Distribution.png" alt="image-20200524142738004" style="zoom:100%;" />
 
 We also constructed percentage of other races' residents in Madison Assessment Areas. We can see that Madison is mainly composed of white population. Only a handful of the area has less than 50% white percentage. On the other hand, Asians and Hispanic share the same scale (0 to 25) in contrast to (0 to 90) what we have seen earlier. When we take a closer look at the Asian population, we can observe they center around the Hilldale shopping center area, which is interestingly where I currently live. The Hispanic population is also fairly spread out in Madison. We can see a significantly higher than average percentage to the south of Lake Wingra.
-
 
 
 ## Race Composition of Assessment Areas, and Home Values

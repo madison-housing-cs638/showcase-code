@@ -5,13 +5,15 @@
 <img src="./media/assmt_area_growth_opt.svg" alt="image-20200524142738004" style="zoom:150%;" />
 <img src="./media/new_area_price_hist.svg" alt="image-20200524142738004" style="zoom:150%;" />
 The map above shows boundaries for new single-family assessment areas. These boundaries were created by repeatedly splitting a large assessment area (starting with the whole city as 1 assessment area), into two assessment areas, so that the standard deviation of sales price growth rates was a close as possible between the two new, smaller assessment areas. This splitting process is then repeated for each of these two new areas.
+
 To ensure, "normal" looking assessment areas, I imposed a few extra criteria on each split:
-* Both assessment areas have to have at least 25 homes in them.
-* Both assessment areas have to exceed a minimum size.
-* Both assessment areas can't be too wide / narrow, defined by the ratio of their widths and heights.
-* The number of homes in the two assessment areas can't be different by more than a factor of 2.
+-  Both assessment areas have to have at least 25 homes in them.
+-  Both assessment areas have to exceed a minimum size.
+-  Both assessment areas can't be too wide / narrow, defined by the ratio of their widths and heights.
+-  The number of homes in the two assessment areas can't be different by more than a factor of 2.
 
 The second plot shows the distribution of standard deviations of sales price growth rates in both the new and the old assessment areas.
+
 Even though the new assessment areas were optimized to have near-equal standard deviations of sales prices, the new assessments actually performed worse than the old ones. This might be because they only have straight, right-angle boundaries. It could also be that most of the variation of sales price growth is very localized, and sufficiently large assessment areas will have a hard time separating out the localized variation.
 
 ## Average Sales Price.
