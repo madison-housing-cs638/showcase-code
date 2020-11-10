@@ -24,6 +24,8 @@ This model is a lot more evenly spread out than the last model. Mean assessment 
 ### Aarushi Gupta, 11/09
 <img src="./media/race_stddev_assmt.png" alt="image-20200524142738004" style="zoom:100%;" />
 
+This week I didn’t spend much time on new plots. This one scatterplot shows the Percentage of Black People in each Assessment Area on the x-axis and the Standard Deviation in house Assessment Price for each area on y-axis. While there are a few outliers, it is clearly visible that places where black population is high, the std deviation is in the range of 0-100 and places where it is low, the std deviation is in the range of 0-200. There are a few outliers.
+After the presentation in class, we are trying to come up with a better measure to plot on y-axis.
 
 
 ## Percentage of multiple races' residents in Madison Assessment Areas
@@ -34,9 +36,9 @@ We also constructed percentage of other races' residents in Madison Assessment A
 
 
 ## Race Composition of Assessment Areas, and Home Values
-
+### Aarushi Gupta, 11/02
 <img src="./media/Single_Family_Race_Value.png" alt="image-20200524142738004" style="zoom:100%;" />
-
+This pilot shows the percentage of Black population in each Assessment Area. The yellow dots on the map correspond to the houses that were assessed below the median house assessment value, and pink dots indicate the houses that were assessed above the median assessment value. The red big dots are the houses that had the median assessment price. The goal of making this plot was to study how houses are assessed in different areas depending on the percentage of black population. A few improvements we are planning to make for this plot is to find a better measure to compare the house assessment values and include other races to see if we get similar results.
 
 ## Average Inflation-Adjusted values for homes with racialized and non-racialized names in Madison.
 ### Desmond Fung, 10/19

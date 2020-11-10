@@ -1,8 +1,9 @@
 # General Exploration
 
 ## Map of Recorded Single Family Parcels
-### Aarushi Gupta, 11/2
+### Aarushi Gupta, 11/02
 <img src="./media/Single_Family_Points.png" alt="image-20200524142738004" style="zoom:80%;" />
+This plot shows the number distribution of Black people across different postal codes in the city of Madison. On the map, each pink dot denotes a house that was assessed by the city. One major conclusion is : A few areas with densely black populations are unassessed by the city. This might indicate towards racial biases.  However, we lack some concrete evidence because it might be possible that these areas are not populated thickly by population or don't include many houses. This is something, we will try to work on in our final report.
 
 ## Distribution of Single Family sales prices over time.
 ### Ben Kizaric 10/19
