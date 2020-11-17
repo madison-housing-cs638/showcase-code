@@ -1,5 +1,17 @@
 # Assessment Area Evaluation
 
+## Simulated assessment price accuracy.
+### Ben Kizaric 11/16
+<img src="./media/simulated_map_performance.svg" style="zoom:150%;">
+
+This week, I wanted to see how the alternative assessment area maps we created would impact the actual assessment prices of actual homes. Specifically,  I wanted to see if this made them more or less accurate. To do this, I created three "simulated" assessment prices for each house, using a regression model taking in the time-adjusted sales price for each house, the home's square footage, the year the house was built, and the *median sales price of homes in that home's assessment area.*
+
+This last variable, the median sales price of homes in that home's assessment area, is what I changed to see the effects of the three different assessment area maps.  The three different maps being the actual assessments currently in use by the city, a price-optimized map, and a growth optimized map (See here). 
+
+This process yielded three simulated assessment prices for each house. I then looked at the degree of under/over-evaluation, defined by `100*(AssmtPrice-SalesPrice)/SalesPrice` for each of the simulated assessment prices for each house. 
+
+Pictured above is a bar plot depicting the average under-evaluation under the three different maps / three simulated assessment values. The different in evaluation is relatively small, but the price-optimized and growth-optimized maps result in more accurate simulated assessment prices. 
+
 ## Alternative Assessment Area based on Sales Price Growth
 ### Ben Kizaric 11/09
 <img src="./media/assmt_area_growth_opt.svg" alt="image-20200524142738004" style="zoom:150%;" />
