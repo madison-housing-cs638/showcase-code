@@ -1,5 +1,20 @@
 # Assessment Area Evaluation
 
+## Assessment Price Accuracy by Race
+### Desmond Fung 11/16
+<img src="./media/AssmtAccuracy_Black.png">
+<img src="./media/AssmtAccuracy_White.png">
+<img src="./media/AssmtAccuracy_Asian.png">
+
+**How to interpret the plot?**
+
+ - For example, with a score of 100, that means this house was assessed at 100% over its actual value
+For accuracy, the average percentage error is -6.4%, which means assessments are on average under-valuing home 6.4% over its actual value.
+
+For consistency, the standard deviation is 45, which means the accuracy percentages error is fairly spread out from their mean average value. Since standard deviation is not intuitive for many people without a statistic background, an interquartile range is provided for interpretability. The interquartile range is 14.4 percentage, that's the same as 50% of the data lies within -21 to -6.6 percent error.
+
+For racial equality, the slope of the regression line for the Black resident is -1.1. This means there is a trend that tax assessment accuracy would decrease by -1.1% for every increase in the percentage of black in the assessment area. In contrast, the slope of the regression line for White and Asian resident is 0.34 and respectively 0.28, which imply racial equality might exist in assessment values.
+
 ## Simulated assessment price accuracy.
 ### Ben Kizaric 11/16
 <img src="./media/simulated_map_performance.svg" style="zoom:150%;">
