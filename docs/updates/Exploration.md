@@ -1,5 +1,18 @@
 # General Exploration
 
+## Average Sales Price and Other Variables
+### Aarushi Gupta, 11/16
+<img src="./media/All_Race_Prices.png" alt="image-20200524142738004" style="zoom:100%;" />
+
+This plot shows the percentage distribution of different races in different areas. The y-axis represents the mean sales prices. We tried to see any visible trend, however it seems that there are not really any important trends. It is mostly that each area has a higher percentage of white population and lower percentage of other races. The only useful comparison is that the areas having very high mean sale prices have very low percentages of other races while a higher percentage of white population.
+
+We also studied how does various other factors effect these mean sales prices
+
+<img src="./media/Income_House_Prices.png" alt="image-20200524142738004" style="zoom:50%;" />
+<img src="./media/Num_Homes_Prices.png" alt="image-20200524142738004" style="zoom:50%;" />
+<img src="./media/Population_Prices.png" alt="image-20200524142738004" style="zoom:50%;" />
+
+
 ## Map of Recorded Single Family Parcels
 ### Aarushi Gupta, 11/02
 <img src="./media/Single_Family_Points.png" alt="image-20200524142738004" style="zoom:80%;" />
