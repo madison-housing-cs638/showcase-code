@@ -1,5 +1,17 @@
 # Assessment Area Evaluation
 
+
+## Examination of "Problem" Assessment area & Evaluation of Standard Deviation as a metric of similarity.
+### Ben Kizaric 11/23
+<img src="./media/price_dev_assmt.svg" alt="image-20200524142738004" style="zoom:60%;" />
+<img src="./media/trouble_area_prices.svg">
+
+We examined assessment area 24, which covers area south of the capitol building, as well as student housing on the east side of campus. Previous findings indicated that there was a large deviation of prices of single family homes in the area, so we wanted to see if this area should  be split in some way. However, what we found is that the large deviation of prices came not from distinctly priced clusters of homes, but a single home that sold for upwards of 11 million dollars in today's money.
+
+This can be seen in the numerous circles above, each corresponding to a home, with the area of the circle being proportional to the home's sale price. The one wildly expensive home is shown as the very large circle. 
+
+This finding has made us question the usefulness standard deviation as a metric of similarity. Standard deviation looks to be sensitive to outliers in the data. We might be better off using Interquartile Range or similar metric.
+
 ## Assessment Price Accuracy by Race
 ### Desmond Fung 11/16
 <img src="./media/AssmtAccuracy_Black.png">
