@@ -54,7 +54,8 @@ module.exports = {
           ["/updates/Race", "Race"],
           ["/updates/Other", "Other Factors"],
           ["/updates/AssessmentQuality", "Area Evaluation"],
-          ["/updates/AssessmentAreaAlternatives", "Alternative Assessment Areas"]
+          ["/updates/AssessmentAreaAlternatives", "Alternative Assessment Areas"],
+          ["/updates/AssessmentAreaAccuracy", "Assessment Accuracy"],
         ]
       },
       {
