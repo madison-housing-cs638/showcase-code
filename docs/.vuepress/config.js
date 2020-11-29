@@ -56,6 +56,7 @@ module.exports = {
           ["/updates/AssessmentQuality", "Area Evaluation"],
           ["/updates/AssessmentAreaAlternatives", "Alternative Assessment Areas"],
           ["/updates/AssessmentAreaAccuracy", "Assessment Accuracy"],
+          ["/updates/FinalReport", "Report"]
         ]
       },
       {
