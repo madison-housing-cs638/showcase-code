@@ -8,8 +8,6 @@
 
 ## Introduction
 
-What is an assessment, & Why should we care?
-
 **Tax Assessment Value** is the value that a city assigns to a property, which determines how much property tax the owners of that property will pay. In Madison, Single family (homes), multi-family (apartments), and commercial properties / parcels are assessed separately. This report will focus on single-family properties. 
 
 **Assessment Areas** are geographic portions of cities that are meant to group similar homes together. When individual homes are assessed by the city, they are compared against similar homes throughout a city, but mostly against those in the same assessment area. One would expect a home on a city's outskirts to be compared to other more rural homes, not one nestled in the city center. Assessment areas are important because they help determine how much property tax each home has to pay, a significant expense for homeowners, and because those property taxes are the largest source of revenue for cites. 
@@ -111,7 +109,7 @@ Here is a heatmap depicting the average time-adjusted sales prices in homes in M
 
 As one might expect, homes close to downtown, as well as those bordering Madison's lakes are priced relatively high.
 
-The following maps shows where homes are priced <span style="color:deeppink; background-color:lightgrey">above the median</span> and <span style="color:yellow; background-color:lightgrey">below the median</span>, as well as <span style="color:cyan; background-color:lightgrey">on the median.</span>
+The following maps shows where homes are assessed <span style="color:deeppink; background-color:lightgrey">above the median value,</span> <span style="color:yellow; background-color:lightgrey">below the median value</span>, as well as <span style="color:cyan; background-color:lightgrey">at the median value.</span>
 
 <img src="./media/median_lg.png" alt="image-20200524142738004" style="zoom:150%;" />
 
