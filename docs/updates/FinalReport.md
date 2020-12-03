@@ -49,9 +49,17 @@ We used four publicly available datasets to make the conclusions in this report.
 * 2010 Census Data
   * 2010 Census Data provided information on the demographics of different regions of Madison. Each single-family home is labeled with the census tract, so we were able to estimate the demographics of each single-family assessment area.  
 
-#### Deficiencies in our data.
+### Deficiencies in our data.
 
-The primary deficiency of our data is that we could only gather assessment values for 2019 and 2020. Without assessment values for each year, it is hard to determine the fairness / accuracy of assessments relative to sales prices because the sales prices vary according to the housing market. 
+The primary deficiency of our data is that we could only gather assessment values for 2019 and 2020. Without assessment values for each year, it is hard to determine the fairness / accuracy of assessments relative to sales prices because the sales prices vary according to the housing market.
+
+We also wanted to assess if all the houses in the City of Madison are assessed equally. Our aim was to find any racial biases in the division of assessment areas and the way homes are assessed. We are going to pay special attention to these areas in our analysis below.
+
+* The heat map above shows the population of each Assessment Area of the City of Madison. Each pink dot corresponds to a single-family home of that area.
+* One of the key problems we faced during our analysis was the unavailability of data for a few areas.
+* The East Sector is one of the densely populated areas yet is one of the least assessed areas. 
+* However, we conclude that this lack of assessment is not due to any racial reasons but in fact the importance of an Assessment area. Majority of the assessment has been done in the Isthmus Sector and Near West Sector (Downtown), which just happens to be thickly populated by White population.
+
 
 ### Adjustments
 
@@ -73,19 +81,72 @@ To account for these factors, we created a metric we call **Time Adjusted Sales 
 
 ## Context on Madison's Assessment Areas:
 
-There are about 100 single family tax assessments in the city of Madison. Pictured below are heatmaps depicting the racial composition of these assessment areas. It can be seen that while Madison is predominately white, there are regions of Madison with a significant minority population. 
+There are about 100 single family tax assessments in the city of Madison. 
 
-<img src="./media/Multi_Race_Distribution.png" alt="image-20200524142738004" style="zoom:100%;" />
+### Race:
+As of July 1, 2019 the population of the City of Madison was 259,680 with 78.6% of the residents being Whites, 6.8% being Blacks, 9% Asians and 6.9% Hispanic.
+<img src="./media/races.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
+There are 123 single family tax assessment areas in the city of Madison. Pictured below are heatmaps depicting the racial composition of these assessment areas. It can be seen that while Madison is predominately white, there are regions of Madison with a significant minority population. 
+
+<img src="./media/race_maps.jpg" alt="image-20200524142738004" style="zoom:100%;" />
+
+White Population :
+* The highest percentage of white population is located at two primary locations : Near East Sector and Near West Sector.
+* In addition to this, the majority of population is concentrated in the West Sector, Near West Sector, Isthmus and Near East Sector.
+
+Black Population :
+* As we move away from the center, the majority of Black population is located in the South Central Sector, North Sector and northern regions of the Near East Sector.
+
+Asian Population :
+* The highest percentage of Asian population is concentrated in one of the Assessment areas in the West Sector.
+
+Hispanic Population 
+* The South Central Sector has the majority of Hispanic population.
+
+### Assessment Values & Sales Prices
 Here is a heatmap depicting the average time-adjusted sales prices in homes in Madison. 
 
-<img src="./media/growth_avg_assmt.svg" alt="image-20200524142738004" style="zoom:150%;" />
+<img src="./media/price_avg_assmt.svg" alt="image-20200524142738004" style="zoom:150%;" />
 
 As one might expect, homes close to downtown, as well as those bordering Madison's lakes are priced relatively high.
+
+The following maps shows where homes are priced <span style="color:deeppink; background-color:lightgrey">above the median</span> and <span style="color:yellow; background-color:lightgrey">below the median</span>, as well as <span style="color:cyan; background-color:lightgrey">on the median.</span>
+
+<img src="./media/median_lg.png" alt="image-20200524142738004" style="zoom:150%;" />
+
+* It seems like on the western side of Madison the houses are assessed above the median house assessment price, while on the east side the assessments are below the median assessment value. 
+* We can see that houses above median value are primarily in the areas away from the downtown. The houses located in the downtown region are priced above the median.
+* Another key takeaway is the lack of available data for the South Central Sector.
+* In addition to this, the pink dots dominate the area where the majority of Asian population lives in the West Sector.
+
 
 ## Question: Are assessments and assessment areas fair?
 
 ### Race
+
+A new analysis reported by The Washington post suggests that Black families pay significantly higher property taxes than white families across the U.S.. We are intrigued whether a similar trend is seen in Madison and whether a tax assessment by the city of Madison is accurate. 
+
+Of particular interest is assessing the fairness of black neighborhoods, so we first looked at where houses are <span style="color:red;background-color:lightgrey">over-assessed</span> (an assessment greater than sales price) and <span style="color:blue;background-color:lightgrey">under-assessed</span> (an assessment less than sales price), overlayed on where black residents live in Madison. 
+
+<img src="./media/race_price.png" alt="image-20200524142738004" style="zoom:150%;" />
+
+We also look at the relationship between racial makeup and assessment fairness more closely.  In the following plots, we will be measuring the accuracy of tax assessment using `100 * (AssmtPrice-SalesPrice)/SalesPrice`. The black lines represent city-wide distribution while the other set of three lines represents per-area distribution. 
+
+<img src="./media/blk_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
+
+<img src="./media/asn_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
+
+<img src="./media/wht_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
+
+For accuracy, the average percentage error is -6.4\%, which means assessments are on average under-valuing home 6.4\% over its actual value.
+ 
+For consistency, the standard deviation is 45, which means the accuracy percentages error is fairly spread out from their mean average value. Since standard deviation is not intuitive for many people without a statistical background, an interquartile range is provided for interpretability. The interquartile range is 14.4 percent, that's the same as 50\% of the data lies within -21 to -6.6 percent error.
+ 
+For racial equality, the slope of the regression line for the Black resident is -1.1. This means there is a trend that tax assessment accuracy would decrease by -1.1\% for every increase in the percentage of black in the assessment area. In contrast, the slope of the regression line for White and Asian residents is 0.34 and respectively 0.28, which imply racial equality might exist in assessment values.
+ 
+To answer our initial question, a negative regression line in black population means assessment value is less than sales price, which is good for individual residents since they pay less tax. The nationwide assessment trend reported by previous work does not appear in our analysis of house assessments in Madison in 2019.
+
 
 ### Time of Sale
 
