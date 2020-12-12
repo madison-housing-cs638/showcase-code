@@ -1,14 +1,14 @@
-# Report
+# Single Family Tax Assessments in Madison
 
-**Ben Kizaric**
-
-**Aarushi Gupta**
-
-**Desmond Fung**
+**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
 
 ## Introduction
 
-**Tax Assessment Value** is the value that a city assigns to a property, which determines how much property tax the owners of that property will pay. In Madison, Single family (homes), multi-family (apartments), and commercial properties / parcels are assessed separately. This report will focus on single-family properties. 
+In Madison, property taxes are proportional to a property's value, which is estimated by city assessors.  Higher assessments correspond to greater yearly tax collection, so it is important that assessments be accurate, or at least consistent (e.g., if properties are under-assessed on average, the under-assessment should at least be uniform so that all property owners benefit evenly). This report will focus on single-family properties. 
+
+Key to this report is the idea of assessment accuracy, and assessment fairness. We define **Assessment Accuracy** as the percentage of the most recent sales price that the assessed value for a home is above or below the sales price, which can be expressed as `100 * (AssmtPrice-SalesPrice)/SalesPrice`. For example, if a home recently sold for $100K, and it was assessed for \$200K, it's assessment value accuracy score would be 100%, because it is assessed at double it's most recent sales price. For this reason, we consider homes with positive accuracy scores to be over-assessed, and homes with negative accuracy scores to be under-assessed.
+
+The over/under assessment of a home has different implications for the homeowner and the city. For example, consider when a home is under-assessed. This is *good for the homeowner* because they will be paying less taxes than they would if their home was assessed at the last sales price. But, this is *bad for the city*, because the city will be getting less tax revenue. Generally, we consider any score closer to 0 "better", in a way looking at the absolute value of homes, so a home under / overvalued by 10% is equally "accurate". But when we discuss the fairness of assessment values, we are especially sensitive to some sections of the city having a higher/lower scores than others. For example, if we found that predominantly black assessment areas had a higher accuracy score than white neighborhoods, this would hint at a racial unfairness, as black households would be paying more in taxes relative to the sales price of their homes. 
 
 **Assessment Areas** are geographic portions of cities that are meant to group similar homes together. When individual homes are assessed by the city, they are compared against similar homes throughout a city, but mostly against those in the same assessment area. One would expect a home on a city's outskirts to be compared to other more rural homes, not one nestled in the city center. Assessment areas are important because they help determine how much property tax each home has to pay, a significant expense for homeowners, and because those property taxes are the largest source of revenue for cites. 
 
@@ -16,36 +16,14 @@ The homes in "good" assessment areas should be relatively similar in some respec
 
 In this project, we have evaluated the quality of assessment areas 3 ways.
 
-*  Standard Deviation of sales prices of homes within assessment areas. 
-   * Motivation: in "good" assessment areas, homes are priced similarly. Assessment areas with a low standard deviation of sales prices will be priced similarly.
-   * We also use the IQR of sales prices of homes within assessment areas as a measure of spread that is less susceptible to outliers.
-*  Standard Deviation of growth rate of sales prices of homes within assessment areas.
-   * Motivation: in "good" assessment areas, homes are affected by market prices in a similar way, and the values of homes should be growing / shrinking at a similar rate.  
-*  Assessment Value Accuracy: The percentage of the most recent sales price that the assessed value for a home is above or below the sales price, which can be expressed as `100 * (AssmtPrice-SalesPrice)/SalesPrice`. The average or median of this value for each home in an assessment area is then taken.
-   * For example, if a home recently sold for $100K, and it was assessed for \$200K, it's assessment value accuracy score would be 100%, because it is assessed at double it's most recent sales price.
-   * Motivation: "Fair" assessment prices for homes should be roughly equal to the sales price of the home, so "fair" assessment areas will have assessment value accuracy scores around zero, or at least all be at the same level of over / under evaluation.
+*  Standard Deviation of sales prices of homes within assessment areas. This is based on the idea that in "good" assessment areas, homes are priced similarly. Assessment areas with a low standard deviation of sales prices will be priced similarly. We also use the IQR of sales prices of homes within assessment areas as a measure of spread that is less susceptible to outliers.
+*  Standard Deviation of growth rate of sales prices of homes within assessment areas. The motivation being that in "good" assessment areas, homes are affected by market prices in a similar way, and the values of homes should be growing / shrinking at a similar rate.
 
-**A note on fairness:** The over/under assessment of a home has different implications for the homeowner and the city. For example, consider when a home was under-assessed (a negative assessment value accuracy score):
-
-* This is *good for the homeowner* because they will be paying less taxes than they would if their home was assessed at the last sales price.  
-* But, this is *bad for the city*, because the city will be getting less tax revenue.   
-
-Generally, we consider any score closer to 0 "better", in a way looking at the absolute value of homes, so a home under / overvalued by 10% is equally "accurate". But when we discuss the fairness of assessment values, we are especially sensitive to some sections of the city having a higher/lower scores than others. For example, if we found that predominantly black assessment areas had a higher accuracy score than white neighborhoods, this would hint at a racial unfairness, as black households would be paying more in taxes relative to the sales price of their homes. 
-
-## Methodology
+## Methodology & Data
 
 ### Data Sources
 
-We used four publicly available datasets to make the conclusions in this report.
-
-* [City of Madison open data portal: Tax Parcels](https://data-cityofmadison.opendata.arcgis.com/datasets/tax-parcels-assessor-property-information)
-  * This dataset has information on every single-family property in Madison, including it's location, assessment area membership, and characteristics of the home, like square footage and number of bedrooms. 
-* [City of Madison open data portal: Single Family Assessment Areas](https://data-cityofmadison.opendata.arcgis.com/datasets/assessment-areas-single-family)
-  * This dataset has the boundaries of each single family assessment area in Madison.
-* [City of Madison's Assessor's Office](https://www.cityofmadison.com/assessor/property/additionalpropertydata.cfm?ParcelN=070933204243&Type=S) 
-  * The city of Madison publishes more in-depth information on each property in the city on the assessor's office website. This data source provided us the assessment prices and past sales prices on each single family property.
-* 2010 Census Data
-  * 2010 Census Data provided information on the demographics of different regions of Madison. Each single-family home is labeled with the census tract, so we were able to estimate the demographics of each single-family assessment area.  
+We used four publicly available datasets to make the conclusions in this report. From the City of Madison's open data portal, we use the [Tax Parcels](https://data-cityofmadison.opendata.arcgis.com/datasets/tax-parcels-assessor-property-information), which has information on every single-family property in Madison, including it's location, assessment area membership, and characteristics of the home, like square footage and number of bedrooms. Also from the city's portal, we use the [Single Family Assessment Areas](https://data-cityofmadison.opendata.arcgis.com/datasets/assessment-areas-single-family) dataset to get the boundaries of each single family assessment area in Madison. The city also publishes more in-depth information on each property in the city on the [assessor's office website.](https://www.cityofmadison.com/assessor/property/additionalpropertydata.cfm?ParcelN=070933204243&Type=S) This data source provided us the assessment prices and past sales prices on each single family property. Finally, 2010 Census Data provided information on the demographics of different regions of Madison. Each single-family home is labeled with the census tract, so we were able to estimate the demographics of each single-family assessment area.  
 
 ### Deficiencies in our data.
 
@@ -53,10 +31,9 @@ The primary deficiency of our data is that we could only gather assessment value
 
 We also wanted to assess if all the houses in the City of Madison are assessed equally. Our aim was to find any racial biases in the division of assessment areas and the way homes are assessed. We are going to pay special attention to these areas in our analysis below.
 
-* The heat map above shows the population of each Assessment Area of the City of Madison. Each pink dot corresponds to a single-family home of that area.
-* One of the key problems we faced during our analysis was the unavailability of data for a few areas.
-* The East Sector is one of the densely populated areas yet is one of the least assessed areas. 
-* However, we conclude that this lack of assessment is not due to any racial reasons but in fact the importance of an Assessment area. Majority of the assessment has been done in the Isthmus Sector and Near West Sector (Downtown), which just happens to be thickly populated by White population.
+We were also interested in the extend of missing home data. The heat map below shows the population of each Assessment Area of the City of Madison. Each orange dot corresponds to a single-family home of that area. One of the key problems we faced during our analysis was the unavailability of data for a few areas. You can see that the East Sector is one of the densely populated areas yet is one of the least assessed areas. However, we believe that this discrepancy between population and number of homes has more to do with the prevalence of apartments in these areas. 
+
+<img src="./media/simplehomes_population.png" alt="image-20200524142738004" style="zoom:100%;" />
 
 
 ### Adjustments
@@ -79,13 +56,12 @@ To account for these factors, we created a metric we call **Time Adjusted Sales 
 
 ## Context on Madison's Assessment Areas:
 
-There are about 100 single family tax assessments in the city of Madison. 
 
 ### Race:
 As of July 1, 2019 the population of the City of Madison was 259,680 with 78.6% of the residents being Whites, 6.8% being Blacks, 9% Asians and 6.9% Hispanic.
 <img src="./media/races.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
-There are 123 single family tax assessment areas in the city of Madison. Pictured below are heatmaps depicting the racial composition of these assessment areas. It can be seen that while Madison is predominately white, there are regions of Madison with a significant minority population. 
+In Madison there are 47,325 single family homes. These homes are split into 123 single family tax assessment areas with an average of 385 homes in each. Pictured below are heatmaps depicting the racial composition of these assessment areas. It can be seen that while Madison is predominately white, there are regions of Madison with a significant minority population. 
 
 <img src="./media/race_maps.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
@@ -164,30 +140,20 @@ With the exception of some low-population outliers on the outskirts of Madison, 
 
 ### Alternative Area Maps
 
-This section examines three potential single families assessment area maps.
+This section examines two potential single families assessment area maps. We look at both the current assessment area map created by the city of Madison, as well as a map created to made the IQR of sales prices similar between areas.
 
-- The current assessment area map created by the city of Madison.
-- A map created to made the standard deviation of sales prices similar between areas.
-- A map created to make the standard deviation of growth rate of sales prices similar between areas.
+This last map was created by repeatedly splitting a large assessment area (starting with the whole city as 1 assessment area), into two assessment areas, so that the IQR of sales price growth rates was a close as possible between the two new, smaller assessment areas. This splitting process is then repeated for each of these two new areas.
 
-The last two maps were created by repeatedly splitting a large assessment area (starting with the whole city as 1 assessment area), into two assessment areas, so that the standard deviation of sales price growth rates was a close as possible between the two new, smaller assessment areas. This splitting process is then repeated for each of these two new areas.
+To ensure, "normal" looking assessment areas, we imposed a few extra criteria on each split. (1) Both assessment areas have to have at least 25 homes in them. (2) Both assessment areas have to exceed a minimum size. (3) Both assessment areas can't be too wide / narrow, defined by the ratio of their widths and heights. (4) The number of homes in the two assessment areas can't be different by more than a factor of 2.
 
-To ensure, "normal" looking assessment areas, we imposed a few extra criteria on each split:
+<img src="./media/perty_og_map.png" alt="image-20200524142738004" style="zoom:100%;" />
+<img src="./media/Perty_IQR_Map.png" alt="image-20200524142738004" style="zoom:80%;" />
 
-- Both assessment areas have to have at least 25 homes in them.
-- Both assessment areas have to exceed a minimum size.
-- Both assessment areas can't be too wide / narrow, defined by the ratio of their widths and heights.
-- The number of homes in the two assessment areas can't be different by more than a factor of 2.
+The plot below shows the distribution of IQR of sales price growth rates in both the new and the old assessment areas.
 
-<img src="./media/og_boundries.svg" alt="image-20200524142738004" style="zoom:100%;" />
-<img src="./media/assmt_area_price_opt.svg" alt="image-20200524142738004" style="zoom:80%;" />
-<img src="./media/assmt_area_growth_opt.svg" alt="image-20200524142738004" style="zoom:80%;" />
+<img src="./media/iqr_area_hist.png" alt="image-20200524142738004" style="zoom:80%;" />
 
-The plots below show the distribution of standard deviations of sales price growth rates in both the new and the old assessment areas.
-
-<img src="./media/new_area_price_hist.svg" alt="image-20200524142738004" style="zoom:150%;" />
-
-Even though the new assessment areas were optimized to have near-equal standard deviations of sales prices, the new assessments actually performed worse than the old ones. This might be because they only have straight, right-angle boundaries. It could also be that most of the variation of sales price growth is very localized, and sufficiently large assessment areas will have a hard time separating out the localized variation.
+Even though the new assessment areas were optimized to have near-equal IQR of sales prices, the new assessments actually performed worse than the old ones. This might be because they only have straight, right-angle boundaries. It could also be that most of the variation of sales price growth is very localized, and sufficiently large assessment areas will have a hard time separating out the localized variation.
 
 ### Alternative Area Maps Price Simulation
 
@@ -199,7 +165,7 @@ Finally, we looked to see the impact that these two maps would have on assessmen
 - The median sales price of home's in that home's assessment area.
   - This was different between the three assessment area maps.
 
-This process yielded three simulated assessment prices for each house. I then looked at the degree of under/over-evaluation, defined by `100*(AssmtPrice-SalesPrice)/SalesPrice` for each of the simulated assessment prices for each house.
+This process yielded three simulated assessment prices for each house. We then looked at the degree of under/over-evaluation, defined by `100*(AssmtPrice-SalesPrice)/SalesPrice` for each of the simulated assessment prices for each house.
 
 <img src="./media/simulated_map_performance.svg" style="zoom:150%;">
 
