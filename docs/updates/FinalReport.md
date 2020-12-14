@@ -1,6 +1,6 @@
 # Single Family Tax Assessments in Madison
 
-**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
+**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Guptaa (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
 
 ## Introduction
 
