@@ -1,6 +1,6 @@
 # Single Family Tax Assessments in Madison
 
-**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarudwdeshi Guptta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
+**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
 
 ## Introduction
 
@@ -101,7 +101,7 @@ The following maps shows where homes are assessed <span style="color:deeppink; b
 
 A new analysis reported by The Washington post suggests that Black families pay significantly higher property taxes than white families across the U.S.. We are intrigued whether a similar trend is seen in Madison and whether a tax assessment by the city of Madison is accurate. 
 
-Of particular interest is assessing the fairness of black neighborhoods, so we first looked at where houses are <span style="color:red;background-color:lightgrey">over-assessed</span> (an assessment greater than sales price) and <span style="color:blue;background-color:lightgrey">under-assessed</span> (an assessment less than sales price), overlayed on where black residents live in Madison. 
+Of particular interest is assessing the fairness of black neighborhoods, so we first looked at where houses are <span style="color:red;background-color:lightgrey">over-assessed</span> (an assessment greater than sales price) and <span style="color:green;background-color:lightgrey">under-assessed</span> (an assessment less than sales price), overlayed on where black residents live in Madison. 
 
 <img src="./media/race_price.png" alt="image-20200524142738004" style="zoom:150%;" />
 
