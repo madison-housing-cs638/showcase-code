@@ -1,6 +1,26 @@
 # Single Family Tax Assessments in Madison
 
-**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
+**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aaaarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
+
+## What to expect
+### Introduction 
+In this section we introduce **Assessment Area** and explain what is **Tax Assessment**. We also mention what are the various **Assessment Evaluation Measures** that exist. 
+
+### Data Description and Methodology 
+This section mentions our **Data Sources** and the **Adjustments** made for evaluation. 
+
+### Madison's Assessment Areas
+This section gives a brief overview of the **racial/ethnic** composition of the Assessment Areas. We also talk about **sales and assessment prices** in each area.
+
+### Are Assessment Areas Fair ?
+Here we evaluate the **fairness** of property assessment by comparing the Assessment and Sales Prices, primarily focusing on **racial/ethnic composition** and **time of sale** of the house.
+
+### How to improve Assessment Areas ?
+This portion evaluates the quality of existing assessment areas and also proposes a new map. Check it out to see the **comparison of new and old assessment areas**.
+
+### Conclusions
+
+
 
 ## Introduction
 
