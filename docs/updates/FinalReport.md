@@ -1,6 +1,6 @@
 # Single Family Tax Assessments in Madison
 
-**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aaaarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
+**Authors:** Ben Kizaric (bakizaric@wisc.edu), Aarushi Gupta (gupta232@wisc.edu), Desmond Fung (dfund2@wisc.edu)
 
 ## What to expect
 ### Introduction 
@@ -148,6 +148,8 @@ We also examined the relationship between assessment fairness / accuracy and the
 
 <img src="./media/Accuracy_Sale_Year.svg" alt="image-20200524142738004" style="zoom:150%;" />
 
+It's important to note that this trend is not just demonstrating the fact that homes are getting more expensive over time, even adjusted for inflation. This is becasue we use a time-adjusted sales price when computing the accuracy of assessments, which generally raises the prices of older homes. However, it *is* possible that this trend is seen becasue homes sold most recently in the past are more likely to be older homes, with assessment values that reflect this.
+
 ## Question: How can assessment areas be improved?
 
 ### Current Area Quality
@@ -177,19 +179,13 @@ Even though the new assessment areas were optimized to have near-equal IQR of sa
 
 ### Alternative Area Maps Price Simulation
 
-Finally, we looked to see the impact that these two maps would have on assessment prices, and if the assessment prices simulated under these new maps are more accurate than for existing maps. In order to do this, we created three "simulated" assessment prices **for each house,** using three regression models, each corresponding to a different assessment area map. Each regression model was trained, using every home in Madison, to predict the total assessment value of a home. The three regression models all used the following variables about homes as inputs:
-
-- The home's time-adjusted sales price
-- The home's square footage
-- The year the house was built
-- The median sales price of home's in that home's assessment area.
-  - This was different between the three assessment area maps.
+Finally, we looked to see the impact that these two maps would have on assessment prices, and if the assessment prices simulated under these new maps are more accurate than for existing maps. In order to do this, we created three "simulated" assessment prices **for each house,** using three regression models, each corresponding to a different assessment area map. Each regression model was trained, using every home in Madison, to predict the total assessment value of a home. The three regression models all used the following variables about homes as inputs: (1) The home's time-adjusted sales price. (2) The home's square footage. (3) The year the house was built. (4) The median sales price of home's in that home's assessment area. This was different between the three assessment area maps.
 
 This process yielded three simulated assessment prices for each house. We then looked at the degree of under/over-evaluation, defined by `100*(AssmtPrice-SalesPrice)/SalesPrice` for each of the simulated assessment prices for each house.
 
-<img src="./media/simulated_map_performance.svg" style="zoom:150%;">
+<img src="./media/sim_ass.jpg" style="zoom:150%;">
 
-Pictured above is a bar plot depicting the average under-evaluation under the three different maps / three simulated assessment values. The different in evaluation is relatively small, but the price-optimized and growth-optimized maps result in more accurate simulated assessment prices.
+Pictured above is a bar plot depicting the average under-evaluation under the three different maps / three simulated assessment values. The simulated assessments are underassessing homes to a greater degree than the observed assessments becasue this model is a much more crude metric of assessment than the one the city uses. With that in mind, the difference in evaluation between these maps is relatively small, but the optimized maps result in more accurate simulated assessment prices.
 
 ## Conclusions
 
