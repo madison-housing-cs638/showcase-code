@@ -127,11 +127,11 @@ Of particular interest is assessing the fairness of black neighborhoods, so we f
 
 We also look at the relationship between racial makeup and assessment fairness more closely.  In the following plots, we will be measuring the accuracy of tax assessment using `100 * (AssmtPrice-SalesPrice)/SalesPrice`. The black lines represent city-wide distribution while the other set of three lines represents per-area distribution. 
 
-![](./media/% of Asian resident vs assessment accuracy.png)
 
 
+![asian](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\asian.png)
 
-![](./media/% of white resident vs assessment accuracy.png)
+![white](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\white.png)
 
 Each gray point in the scatterplot represents one sale of a single-family home made recently, as a reference the median sale year in the dataset is 2013. Each column formed by the gray dots represents home sales made within the same neighborhood.
 
@@ -139,11 +139,11 @@ The black lines represent city-wide distribution, meaning how the city perform a
 
 Some key findings include the city-wide mean percentage error is -6.4% and the median sits at -13%, suggesting the city as a whole has a tendency to slightly under-assess home. The city-wide interquartile range is 14.4 percent, which means 50\% of the data lies within -21 to -6.6 percent error.
 
-Also, notice as the number of white population increase, homes are becoming over-assessed, meaning that home is being assessed more than their sales price, suggesting that white homeowner, in general, pay more tax than if their home was assessed at last sale price
+Also, notice as the number of white population increase, homes are becoming over-assessed, meaning that home is being assessed more than their sales price, suggesting that white homeowner, in general, pay more tax than if their home was assessed at last sale price.
 
 
 
-![](./media/% of black resident vs assessment accuracy.png)
+![black](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\black.png)
 
 On the other hand, our regression line in the scatter plot for % of black resident in the assessment area shows as the number of the black population grows, homes are becoming under-assessed, suggesting black single-family pay fewer property taxes than white single-family in Madison, which is the opposite of the trend we are expecting. Again, we should be aware that there are many unseen factors in play that result in such a trend.
 
