@@ -121,25 +121,39 @@ The following maps shows where homes are assessed <span style="color:deeppink; b
 
 A new analysis reported by The Washington post suggests that Black families pay significantly higher property taxes than white families across the U.S.. We are intrigued whether a similar trend is seen in Madison and whether a tax assessment by the city of Madison is accurate. 
 
-Of particular interest is assessing the fairness of black neighborhoods, so we first looked at where houses are <span style="color:red;background-color:lightgrey">over-assessed</span> (an assessment greater than sales price) and <span style="color:green;background-color:lightgrey">under-assessed</span> (an assessment less than sales price), overlayed on where black residents live in Madison. 
+Of particular interest is assessing the fairness of black neighborhoods, so we first looked at where houses are <span style="color:red;background-color:lightgrey">over-assessed</span> (an assessment greater than sales price) and <span style="color:green;background-color:lightgrey">under-assessed</span> (an assessment less than sales price), overlaid on where black residents live in Madison. 
 
 <img src="./media/race_price.png" alt="image-20200524142738004" style="zoom:150%;" />
 
 We also look at the relationship between racial makeup and assessment fairness more closely.  In the following plots, we will be measuring the accuracy of tax assessment using `100 * (AssmtPrice-SalesPrice)/SalesPrice`. The black lines represent city-wide distribution while the other set of three lines represents per-area distribution. 
 
-<img src="./media/blk_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
+![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of Asian resident vs assessment accuracy.png)
 
-<img src="./media/asn_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
-<img src="./media/wht_accuracy.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
-For accuracy, the average percentage error is -6.4\%, which means assessments are on average under-valuing home 6.4\% over its actual value.
- 
-For consistency, the standard deviation is 45, which means the accuracy percentages error is fairly spread out from their mean average value. Since standard deviation is not intuitive for many people without a statistical background, an interquartile range is provided for interpretability. The interquartile range is 14.4 percent, that's the same as 50\% of the data lies within -21 to -6.6 percent error.
- 
-For racial equality, the slope of the regression line for the Black resident is -1.1. This means there is a trend that tax assessment accuracy would decrease by -1.1\% for every increase in the percentage of black in the assessment area. In contrast, the slope of the regression line for White and Asian residents is 0.34 and respectively 0.28, which imply racial equality might exist in assessment values.
- 
-To answer our initial question, a negative regression line in black population means assessment value is less than sales price, which is good for individual residents since they pay less tax. The nationwide assessment trend reported by previous work does not appear in our analysis of house assessments in Madison in 2019.
+![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of white resident vs assessment accuracy.png)
+
+Each gray point in the scatterplot represents one sale of a single-family home made recently, as a reference the median sale year in the dataset is 2013. Each column formed by the gray dots represents home sales made within the same neighborhood.
+
+The black lines represent city-wide distribution, meaning how the city perform as a whole, while the other set of three red lines represents per-area distribution, meaning how each neighborhood perform.
+
+Some key findings include the city-wide mean percentage error is -6.4% and the median sits at -13%, suggesting the city as a whole has a tendency to slightly under-assess home. The city-wide interquartile range is 14.4 percent, which means 50\% of the data lies within -21 to -6.6 percent error.
+
+Also, notice as the number of white population increase, homes are becoming over-assessed, meaning that home is being assessed more than their sales price, suggesting that white homeowner, in general, pay more tax than if their home was assessed at last sale price
+
+
+
+![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of black resident vs assessment accuracy.png)
+
+On the other hand, our regression line in the scatter plot for % of black resident in the assessment area shows as the number of the black population grows, homes are becoming under-assessed, suggesting black single-family pay fewer property taxes than white single-family in Madison, which is the opposite of the trend we are expecting. Again, we should be aware that there are many unseen factors in play that result in such a trend.
+
+
+
+### **Conclusion**
+
+Ideally, we would be comparing sale prices to the assessments made in the same year the house was sold, however, Madison only publishes assessment data for 2019-2020, so we have to make certain guesses, using the time-adjusted sale price metric mentioned under the Adjustments section, to determine what a house would sell for if it was sold today and use it to make comparison with the 2019 assessment price.
+
+Given the limitation of our data, it’s still an open question whether the prior trend applies at the individual level or in other years. But we can say [the nationwide assessment trend reported by previous work](https://www.washingtonpost.com/business/2020/07/02/black-property-tax/) does not appear at the level of neighborhoods in our analysis of house assessments in Madison using assessment data from 2019 to 2020.
 
 
 ### Time of Sale
@@ -148,7 +162,7 @@ We also examined the relationship between assessment fairness / accuracy and the
 
 <img src="./media/Accuracy_Sale_Year.svg" alt="image-20200524142738004" style="zoom:150%;" />
 
-It's important to note that this trend is not just demonstrating the fact that homes are getting more expensive over time, even adjusted for inflation. This is becasue we use a time-adjusted sales price when computing the accuracy of assessments, which generally raises the prices of older homes. However, it *is* possible that this trend is seen becasue homes sold most recently in the past are more likely to be older homes, with assessment values that reflect this.
+It's important to note that this trend is not just demonstrating the fact that homes are getting more expensive over time, even adjusted for inflation. This is because we use a time-adjusted sales price when computing the accuracy of assessments, which generally raises the prices of older homes. However, it *is* possible that this trend is seen because homes sold most recently in the past are more likely to be older homes, with assessment values that reflect this.
 
 ## Question: How can assessment areas be improved?
 
