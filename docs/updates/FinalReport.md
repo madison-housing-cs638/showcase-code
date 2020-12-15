@@ -78,7 +78,7 @@ To account for these factors, we created a metric we call **Time Adjusted Sales 
 
 
 ### Race:
-As of July 1, 2019 the population of the City of Madison was 259,680 with 78.6% of the residents being Whites, 6.8% being Blacks, 9% Asians and 6.9% Hispanic.
+As of July 1, 2019 the population of the City of Madison was 259,680 with 78.5% of the residents being Whites, 6% being Blacks, 9% Asians and 6.5% Hispanic.
 <img src="./media/races.jpg" alt="image-20200524142738004" style="zoom:100%;" />
 
 In Madison there are 47,325 single family homes. These homes are split into 123 single family tax assessment areas with an average of 385 homes in each. Pictured below are heatmaps depicting the racial composition of these assessment areas. It can be seen that while Madison is predominately white, there are regions of Madison with a significant minority population. 
