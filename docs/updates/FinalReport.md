@@ -129,9 +129,9 @@ We also look at the relationship between racial makeup and assessment fairness m
 
 
 
-![asian](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\asian.png)
+<img src="./media/asian.png" alt="image-20200524142738004" style="zoom:150%;" />
 
-![white](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\white.png)
+<img src="./media/white.png" alt="image-20200524142738004" style="zoom:150%;" />
 
 Each gray point in the scatterplot represents one sale of a single-family home made recently, as a reference the median sale year in the dataset is 2013. Each column formed by the gray dots represents home sales made within the same neighborhood.
 
@@ -143,7 +143,7 @@ Also, notice as the number of white population increase, homes are becoming over
 
 
 
-![black](C:\Users\Desmond\Documents\GitHub\showcase-code\docs\updates\media\black.png)
+<img src="./media/black.png" alt="image-20200524142738004" style="zoom:150%;" />
 
 On the other hand, our regression line in the scatter plot for % of black resident in the assessment area shows as the number of the black population grows, homes are becoming under-assessed, suggesting black single-family pay fewer property taxes than white single-family in Madison, which is the opposite of the trend we are expecting. Again, we should be aware that there are many unseen factors in play that result in such a trend.
 
