@@ -127,11 +127,11 @@ Of particular interest is assessing the fairness of black neighborhoods, so we f
 
 We also look at the relationship between racial makeup and assessment fairness more closely.  In the following plots, we will be measuring the accuracy of tax assessment using `100 * (AssmtPrice-SalesPrice)/SalesPrice`. The black lines represent city-wide distribution while the other set of three lines represents per-area distribution. 
 
-![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of Asian resident vs assessment accuracy.png)
+![](./media/% of Asian resident vs assessment accuracy.png)
 
 
 
-![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of white resident vs assessment accuracy.png)
+![](./media/% of white resident vs assessment accuracy.png)
 
 Each gray point in the scatterplot represents one sale of a single-family home made recently, as a reference the median sale year in the dataset is 2013. Each column formed by the gray dots represents home sales made within the same neighborhood.
 
@@ -143,7 +143,7 @@ Also, notice as the number of white population increase, homes are becoming over
 
 
 
-![](C:\Users\Desmond\Documents\GitHub\code\notebooks\% of black resident vs assessment accuracy.png)
+![](./media/% of black resident vs assessment accuracy.png)
 
 On the other hand, our regression line in the scatter plot for % of black resident in the assessment area shows as the number of the black population grows, homes are becoming under-assessed, suggesting black single-family pay fewer property taxes than white single-family in Madison, which is the opposite of the trend we are expecting. Again, we should be aware that there are many unseen factors in play that result in such a trend.
 
